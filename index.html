@@ -1,0 +1,242 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Shōgun is an American historical drama television series created by Rachel Kondo and Justin Marks"
+    />
+    <meta
+      name="keywords"
+      content="Shogun, Japan, Japanese TV Series, Historical TV Series, Historical Drama"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shogun | TV Series</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- navbar - sidebar -->
+    <header>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+        <label for="menu-toggle" class="menu-toggle">☰</label>
+
+        <div class="nav-links">
+          <div class="logo">
+            <a href="https://www.imdb.com/title/tt2788316" target="_blank"
+              ><img src="./image/slider-bcg-image.png"
+            /></a>
+          </div>
+          <a href="#">Ana Sayfa</a>
+          <a href="#characters">Karakterler</a>
+          <a href="#favorite-scene">Favori Sahnem</a>
+          <a href="#episodes">Bölümler</a>
+        </div>
+
+        <div class="profile-icon">
+          <img src="./image/blank-profile-picture.webp" />
+        </div>
+      </nav>
+    </header>
+
+    <!-- anasayfa ve bolumler -->
+    <main>
+      <!-- banner -->
+      <section class="banner">
+        <div>
+          <img src="./image/main-page-bcg-img.png" />
+          <a href="https://www.imdb.com/title/tt2788316" target="_blank">
+            <div class="imdb-clickable-area"></div
+          ></a>
+        </div>
+
+        <div class="banner-text">
+          <p>
+            17. yüzyıl Japonya'sında geçen epik drama, bir İngiliz denizcinin
+            feodal Japonya'nın karmaşık siyasi çekişmelerine karışmasını konu
+            alıyor.
+          </p>
+
+          <div class="stars">
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>☆</span>
+            <p>IMDB Puanı: 9/10</p>
+          </div>
+
+          <button class="favori-btn" onclick="favButton()">
+            Favorilere Ekle
+          </button>
+        </div>
+      </section>
+
+      <!-- karakters -->
+      <section id="characters" class="wrapper">
+        <h2>Karakterler</h2>
+        <div class="characters">
+          <div class="character-card">
+            <img src="./image/yoshii.webp" />
+            <h3>Yoshii Toranaga</h3>
+            <p>
+              Güçlü ve zeki bir daimyo, iktidar mücadelesinin merkezinde yer
+              alıyor.
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="./image/blackthorne.webp" />
+            <h3>John Blackthorne</h3>
+            <p>
+              Japonya'ya gelen ilk İngiliz denizci, kültür çatışmasının simgesi.
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="./image/lady-mariko.webp" />
+            <h3>Lady Mariko</h3>
+            <p>
+              Gizemli geçmişi olan asil bir kadın, iki dünya arasında köprü
+              kuruyor.
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="./image/yabushige.webp" />
+            <h3>Kashigi Yabushige</h3>
+            <p>
+              Yükselmek için sadakatini pazarlayan hırslı bir lord, yaşamak için
+              kurtlarla dans ediyor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- favori sahnem -->
+      <section id="favorite-scene" class="favorite-scene">
+        <h2>Favori Sahnem</h2>
+
+        <div class="scene-container">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/ClmWZX28ARg?si=w0QhT-bwru-ta9ce"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="scene-description">
+            <h3>Dünya Haritası Sahnesi</h3>
+            <p>
+              Benim için dizinin en çarpıcı sahnelerinden biriydi. Şöyle
+              düşünmenizi isteyeceğim; o zamana kadar evrenin sadece dünya ve
+              çevresindeki iki gezegenden oluştuğunu düşünüyorsunuz ve insan
+              harici herhangi bir canlı veya gelişmiş varlık görmemişsiniz. Bir
+              gün gizemli yuvarlak gözlü bir kişi sizin dünyanıza geliyor ve
+              diyor ki, siz bu dünyayı çok büyük görüyorsunuz ama dünyanız
+              aslında geri kalan coğrafyayı hesaba kattığınızda tozun üstündeki
+              toz kadar bile değil.
+            </p>
+            <br />
+            <p>
+              İşte bu sahnede Japonlara tam da bu oluyor. Bildikleri ve hakimi
+              oldukları dünyanın aslında küçüçük bir ada parçası olduğunu
+              öğreniyorlar. Üstüne üstlük bu ada yabancılar tarafından
+              aralarında paylaşılmış ve Papa tarafından Portekizlere armağan
+              edilmiş...
+            </p>
+            <br />
+            <p>
+              <span>📽️ Bölüm: 2</span>
+              <br />
+              <span>⏱️ Süre: 4:50</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- bolumler - vertical card slider -->
+      <section id="episodes" class="episodes">
+        <h2>Bölümler</h2>
+        <input type="radio" name="tab" checked id="bolum-1" />
+        <input type="radio" name="tab" id="bolum-2" />
+        <input type="radio" name="tab" id="bolum-3" />
+        <input type="radio" name="tab" id="bolum-4" />
+        <input type="radio" name="tab" id="bolum-5" />
+        <nav>
+          <label for="bolum-1" class="bolum-1">Bölüm 1</label>
+          <label for="bolum-2" class="bolum-2">Bölüm 2</label>
+          <label for="bolum-3" class="bolum-3">Bölüm 3</label>
+          <label for="bolum-4" class="bolum-4">Bölüm 4</label>
+          <label for="bolum-5" class="bolum-5">Bölüm 5</label>
+          <div class="slider"></div>
+        </nav>
+        <div class="content-wrapper">
+          <div class="content content-1">
+            <div class="title">Anjin</div>
+            <p>
+              Japonya'da bir barbar gemisinin fakir bir balıkçı köyünde kıyıya
+              vurmasıyla kaderler birleşir; Osaka'da Lord Toranaga düşmanlarının
+              oyununa geldiğini fark eder.
+            </p>
+          </div>
+
+          <div class="content content-2">
+            <div class="title">İki Efendinin Hizmetkarları</div>
+            <p>
+              Blackthorne'un Osaka'ya gelişi arı kovanına çomak sokar; Mariko,
+              Lord Toranaga'nın gözetimindeki barbar için tercümanlık yapmak
+              zorunda kalınca davası ve inancı arasında sıkışıp kalır.
+            </p>
+          </div>
+
+          <div class="content content-3">
+            <div class="title">Yarın Yarındır</div>
+            <p>
+              Blackthorne küstah bir suikast girişiminden kurtulduktan sonra
+              Toranaga, müttefiklerini ya Osaka'dan çıkarmak zorunda olduğu ya
+              da kesin bir yenilgiyi göze alması gerektiğini anlar.
+            </p>
+          </div>
+
+          <div class="content content-4">
+            <div class="title">Sekiz Katlı Çit</div>
+            <p>
+              Blackthorne ve Mariko, Toranaga'nın silah alayını savaş için
+              eğitirken yeni ittifaklarını da test eder; Yabushige, eski bir
+              arkadaşı köye geldiğinde Ishido'ya geçmişte verdiği sözlerin
+              üstesinden gelmek zorundadır.
+            </p>
+          </div>
+
+          <div class="content content-5">
+            <div class="title">Yumrukla Disipline Edilmek</div>
+            <p>
+              Blackthorne ve Mariko, ikisinin de ölümüne neden olabilecek bir
+              sırrı kontrol altına almak için mücadele ederken; Yabushige, Lord
+              Toranaga'ya planlarını ifşa eden casusu aramaktadır.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <!-- footer kismina biraz usendim acikcasi cunku yoruldum :')  -->
+    <footer>
+        <section id="footer" class="footer-info">
+            <div class="social-media-accounts">
+                <a href="https://github.com/tarikbagcioglu" target="_blank">Github</a>
+                <a href="https://linkedin.com/in/tarikbagcioglu" target="_blank">Linkedin</a>
+            </div>
+            <h3>Tasarım & Geliştirme 👨‍💻 Muhammed Tarık Bağcıoğlu</h3>
+        </section>
+    </footer>
+  </body>
+</html>

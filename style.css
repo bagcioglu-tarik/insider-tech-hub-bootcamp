@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", serif;
+}
+
+body {
+  background: linear-gradient(#599498 0%, #000000 80%, #000000 100%);
+  color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* header - navbar - sidebar */
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links .logo {
+    width: 120px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #666;
+}
+
+.profile-icon img {
+  border-radius: 50%;
+}
+
+.menu-toggle-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Anasayfa ve bolumler */
+main {
+  margin-top: 70px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* banner */
+.banner {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.banner div:first-child {
+  position: relative;
+}
+
+.banner div:first-child .imdb-clickable-area {
+  position: absolute;
+  width: calc(100%);
+  height: calc(20%);
+  top: calc(80%);
+}
+
+.banner .banner-text {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+
+.favori-btn {
+  background: #ab070f;
+  min-width: 15%;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center;
+}
+.favori-btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.favori-btn.active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* en az 3 karakter - cast */
+#characters.wrapper {
+  margin: 3rem 2rem;
+}
+
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.character-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+}
+
+.character-card img {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.character-card p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* favori sahnem  */
+.favorite-scene {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.scene-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.scene-description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.scene-description h3 {
+  color: #599498;
+  margin-bottom: 1rem;
+}
+/* en az 5 bolum - episodes - vertical card slider */
+
+.episodes {
+  width: 100%;
+  padding: 2rem;
+  background-color: black;
+}
+
+.episodes h2 {
+  margin-bottom: 1rem;
+}
+
+.episodes nav {
+  position: relative;
+  width: 80%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.episodes nav label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  z-index: 2;
+  color: #599498;
+  border-radius: 4px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.episodes nav label:hover {
+  background-color: rgba(23, 162, 184, 0.3);
+}
+
+#bolum-1:checked ~ nav label.bolum-1,
+#bolum-2:checked ~ nav label.bolum-2,
+#bolum-3:checked ~ nav label.bolum-3,
+#bolum-4:checked ~ nav label.bolum-4,
+#bolum-5:checked ~ nav label.bolum-5 {
+  color: #fff;
+}
+
+.slider {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #60A1A3;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#bolum-2:checked ~ nav .slider {
+  left: 20%;
+}
+
+#bolum-3:checked ~ nav .slider {
+  left: 40%;
+}
+
+#bolum-4:checked ~ nav .slider {
+  left: 60%;
+}
+
+#bolum-5:checked ~ nav .slider {
+  left: 80%;
+}
+
+.content-wrapper .content {
+  display: none;
+  background-color: black;
+  color: #fff;
+}
+
+#bolum-1:checked ~ .content-wrapper .content-1,
+#bolum-2:checked ~ .content-wrapper .content-2,
+#bolum-3:checked ~ .content-wrapper .content-3,
+#bolum-4:checked ~ .content-wrapper .content-4,
+#bolum-5:checked ~ .content-wrapper .content-5 {
+  display: block;
+}
+
+.content-wrapper  .content .title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.content p {
+  text-align: justify;
+}
+
+/* footer  */
+/* footer kismina biraz usendim acikcasi cunku yoruldum :') */
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 200px;
+  padding: 5rem 2rem 0.5rem 2rem;
+  background:linear-gradient(1deg, #599498, transparent);
+  gap: 1rem;
+}
+
+.social-media-accounts a {
+  color: #f1f1f1;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.social-media-accounts a:hover {
+  color:#000;
+  transition: all 0.3s ease;
+}
+
+/* media query */
+@media (max-width: 800px) {
+  body {
+    background: linear-gradient(#599498 0%, #000000 50%, #000000 100%);
+    font-size: 0.9rem;
+  }
+
+ header .navbar {
+    justify-content: flex-end;
+  }
+
+ .navbar .nav-links {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 6rem 2rem;
+    transition: left 0.5s ease;
+  }
+
+  .nav-links .logo {
+    width: 50vw;
+}
+
+  .navbar .menu-toggle-checkbox:checked ~ .menu-toggle {
+    left: calc(70% - 50px);
+    color: #e50914;
+    transition: left 0.5s ease;
+  }
+  .navbar .menu-toggle-checkbox:checked ~ .nav-links {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+    z-index: 1;
+  }
+
+  /* favori sahne */
+  .scene-container {
+    grid-template-columns: 1fr;
+  }
+
+  .video-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  /* episodes  */
+  .episodes nav {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .slider {
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0 !important;
+  }
+
+  #bolum-2:checked ~ nav .slider {
+    top: 50px;
+  }
+
+  #bolum-3:checked ~ nav .slider {
+    top: 100px;
+  }
+
+  #bolum-4:checked ~ nav .slider {
+    top: 150px;
+  }
+
+  #bolum-5:checked ~ nav .slider {
+    top: 200px;
+  }
+
+  #bolum-1:checked ~ nav label.bolum-1,
+  #bolum-2:checked ~ nav label.bolum-2,
+  #bolum-3:checked ~ nav label.bolum-3,
+  #bolum-4:checked ~ nav label.bolum-4,
+  #bolum-5:checked ~ nav label.bolum-5 {
+    background-color: #60A1A3;
+  }
+
+  .content-wrapper .content .title {
+    margin: 1rem 0;
+  }
+}
+
+/* animasyon */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
