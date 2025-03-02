@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do-App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="gorev-formu">
+    <h1>Gorev Listem</h1>
+    <form>
+        <div class="form-bolumleri">
+            <label>Gorev Basligi <span class="star">*</span></label>
+            <input type="text" class="baslik" placeholder="Baslik">
+            <!-- eger input yoksa hata mesaji gelecek buraya -->
+            <div class="hata baslik-hatasi">Lutfen baslik giriniz!</div>
+        </div>
+        
+        <div class="form-bolumleri">
+            <label>Gorev Aciklamasi</label>
+            <textarea class="aciklama" placeholder="Aciklama"></textarea>
+        </div>
+
+        <div class="oncelik-kismi">
+            <label>Oncelik: <span class="star">*</span></label>
+            <label><input type="radio" name="oncelikler" value="Dusuk"> Dusuk</label>
+            <label><input type="radio" name="oncelikler" value="Orta"> Orta</label>
+            <label><input type="radio" name="oncelikler" value="Yuksek"> Yuksek</label>
+            <!-- eger input yoksa hata mesaji gelecek buraya -->
+            <div class="hata oncelik-hatasi">Lutfen oncelik seciniz!</div>
+            <!-- tamamlanma durumunu bir label input olarak degil buton olarak verdim, UX'e daha uygun oldugunu dusunuyorum -->
+        </div>
+
+        <button type="submit">Gorev ekle</button>
+    </form>
+</section>
+
+    <section class="gorev-listesi">
+        <!-- eklenen gorevler buraya prepend edilecek -->
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Figtree", sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #F7FFF7;
+    color: white;
+    font-weight: bold;
+    --first-color: #5ec4be;
+    --second-color: #292F36;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 0;   
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--second-color);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4855c9;
+    transition: all ease 0.3s;
+}
+
+/* form veri giris kismi */
+.gorev-formu{
+    background: var(--first-color);
+    padding: 25px 25px 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.form-bolumleri {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.baslik, textarea {
+    margin: 5px 0;
+    font-family: "Figtree", sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.hata {
+    color: var(--second-color);
+    margin: 5px 0;
+    display: none;
+}    
+
+.star {
+    color: var(--second-color);
+}
+
+.oncelik-kismi {
+    margin: 20px 0;
+}
+
+@media (max-width: 800px) {
+    .oncelik-kismi {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* form basta gorunmeyen kisim */
+
+.gorevler {
+    background: var(--first-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.gorevler.tamamlandi {
+    background: linear-gradient(180deg, rgba(34,193,195,0.5) 0%, rgb(66, 253, 45, 0.7) 100%);
+    transition: all ease-in-out 0.5s;
+}
+
+.gorevButonlari {
+    margin-top: 10px;
+    display: flex;
+    gap: 1rem;
+}    
+
+.silBtn {
+    background-color: #FF6B6B;
+}
+
+.silBtn:hover {
+    background-color: rgb(236, 98, 98);
+}
+
+.oncelikler {
+    font-size: 1rem
+}
+
+.Dusuk { color: #00ff1a; }
+.Orta { color: #fffb00; }
+.Yuksek { color: #FF6B6B; }
+
+
+
