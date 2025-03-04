@@ -1,0 +1,165 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ogrenci Kayit Sistemi</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .selected-row {
+        background-color: red;
+        color: whitesmoke;
+      }
+      .container {
+        max-width: 750px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      tbody tr {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Ogrenci Kayit Sistemi</h2>
+      <div class="section">
+        <div class="form-group">
+          <input type="text" id="studentName" placeholder="Öğrenci Adı" />
+          <input type="text" id="studentSurname" placeholder="Öğrenci Soyadı" />
+          <input type="number" id="studentClass" placeholder="Sinif" />
+          <input type="number" id="studentAge" placeholder="Yas" />
+          <input type="text" id="studentNationality" placeholder="Milliyet" />
+
+          <button id="convertToJson" type="submit">JSON'a Dönüştür</button>
+        </div>
+
+        <div class="section">
+          <h3>Tablo</h3>
+          <table id="jsonTable">
+            <thead>
+              <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Sinif</th>
+                <th>Yas</th>
+                <th>Milliyet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- buraya prepend edilecek -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(() => {
+        const studentData = {
+          studentData: [
+            {
+              name: "Tarik",
+              surname: "Bagcioglu",
+              age: "17",
+              class: "12",
+              nationality: "Turkish",
+            },
+            {
+              name: "Ahmet",
+              surname: "Tekce",
+              age: "16",
+              class: "11",
+              nationality: "Turkish",
+            },
+            {
+              name: "Faruk",
+              surname: "Gullu",
+              age: "15",
+              class: "10",
+              nationality: "Turkish",
+            },
+            {
+              name: "Hans",
+              surname: "Zimmer",
+              age: "14",
+              class: "9",
+              nationality: "German",
+            },
+            {
+              name: "Andreas",
+              surname: "Iniesta",
+              age: "13",
+              class: "8",
+              nationality: "Spanish",
+            },
+            {
+              name: "Youssef",
+              surname: "AlNasri",
+              age: "12",
+              class: "7",
+              nationality: "Moroccon",
+            },
+          ],
+        };
+
+        const updateTable = () => {
+          $("#jsonTable tbody").empty();
+          studentData.studentData.forEach((ogrenci) => {
+            const kayitliOgrenci = `
+            <tr>
+                <td>${ogrenci.name}</td>
+                <td>${ogrenci.surname}</td>
+                <td>${ogrenci.age}</td>
+                <td>${ogrenci.class}</td>
+                <td>${ogrenci.nationality}</td>
+            </tr>
+        `;
+            $("#jsonTable tbody").prepend(kayitliOgrenci);
+          });
+        };
+
+        updateTable();
+
+        $("#convertToJson").click((e) => {
+          e.preventDefault();
+
+          const newStudent = {
+            name: $("#studentName").val(),
+            surname: $("#studentSurname").val(),
+            age: Number($("#studentAge").val()),
+            class: Number($("#studentClass").val()),
+            nationality: $("#studentNationality").val(),
+          };
+
+          if (
+            $("#studentName").val() === "" ||
+            $("#studentSurname").val() === "" ||
+            $("#studentAge").val() <= 0 ||
+            $("#studentClass").val() <= 0 ||
+            $("#studentNationality").val() === ""
+          )
+            return false;
+
+          studentData.studentData.push(newStudent);
+
+          updateTable();
+
+          $(
+            "#studentName, #studentSurname, #studentClass, #studentAge, #studentNationality"
+          ).val("");
+        });
+
+        $("#jsonTable").on("click", "tbody tr", function () {
+          $(this).toggleClass("selected-row");
+        });
+      });
+    </script>
+  </body>
+</html>
