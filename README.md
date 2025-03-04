@@ -7,7 +7,7 @@ Learned modern JavaScript features (ES6+), asynchronous programming, and debuggi
 
 ## Week 1 
  
-We developed single page responsive wp by using only HTML and CSS but JS was an extra. My project is merely focused on one of the most known TV series, SHOGUN. I used animations, keyframes, media queries etc. You view the project by clicking [this](https://shoguntv.netlify.app)
+We developed single page responsive wp by using only HTML and CSS but JS was an extra. My project is merely focused on one of the most known TV series, SHOGUN. I used animations, keyframes, media queries etc. You can view the project by clicking [this](https://shoguntv.netlify.app)
 
 ## Week 2 
 
