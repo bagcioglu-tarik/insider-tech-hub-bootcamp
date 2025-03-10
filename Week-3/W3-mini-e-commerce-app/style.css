@@ -1,0 +1,106 @@
+body {
+  margin: 0 400px 0 0;
+  min-width: 350px;
+}
+
+button {
+  margin: 5px 0;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  transition: all transform 1s;
+  background-color: rgb(231, 131, 155);
+  color: white;
+}
+
+#arama {
+  width: 100%;
+  margin: 2% 2%;
+  padding: 10px;
+}
+
+.carousel div {
+  display: flex !important;
+  justify-content: center;
+}
+
+.carousel img {
+  height: 350px;
+}
+
+#urunListesi {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.urunKarti {
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  min-height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all transform 0.3s;
+}
+
+.urunKarti img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: contain;
+  object-position: 5% 0;
+}
+
+.urunKarti img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.urunKarti button {
+  width: 100%;
+}
+
+#sepet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -6px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  padding: 25px 20px;
+  z-index: 11;
+}
+
+.sepetUrunu {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  z-index: 99;
+}
+
+.height-50 {
+  height: 50px;
+}
+
+.description {
+  display: none;
+  padding-top: 10px;
+  font-size: 0.9em;
+}
