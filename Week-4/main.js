@@ -18,18 +18,18 @@ $(document).ready(function () {
         try {
             const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-            if (response.status !== 200) throw new Error(`HTTP Hatası: ${response.status}`); // Koşul düzeltildi
+            if (response.status !== 200) throw new Error(`HTTP hatasi: ${response.status}`); 
             
             const data = await response.json();
             
             localStorage.setItem('users', JSON.stringify({ 
                 data: data, 
-                miliSecond: Date.now() // timestamp ile tutarlılık için
+                miliSecond: Date.now() 
             }));
             
             addUsers(data);
         } catch (error) {
-            alert(`Veri alınamadı. Hata: ${error.message}`); // Hata mesajı düzeltildi
+            alert(`Veri alinamadi Hata: ${error.message}`);
         }
     }
 
@@ -70,16 +70,12 @@ $(document).ready(function () {
         }
         .user-fullname {
             color: #333;
-            font-size: 1.2em;
+            font-size: 1rem;
             margin: 0 0 10px 0;
         }
         .user-info {
             color: #666;
             margin: 5px 0;
-        }
-        .error-message {
-            color: red;
-            padding: 20px;
         }
     `;
 
